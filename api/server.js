@@ -8,6 +8,9 @@ server.use(express.json())
 const userRouter = require('./users/users-router')
 server.use('/api/users', userRouter)
 
+const postRouter = require('./posts/posts-router')
+server.use('/api/posts', postRouter)
+
 server.get('/', (req, res) => {
   res.send(`<h2>Let's write some middleware!</h2>`);
 });
